@@ -1,0 +1,30 @@
+body{
+    color:wheat;
+    background:darkslateblue;
+}
+
+span{
+    font-size:30px;
+}
+
+#camera, #result{
+    border: 2px dashed whitesmoke;
+    width:350px;
+    height: 300px;
+}
+
+label{
+    font-size: 14px;
+    color: darkslategray;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.object_name{
+    font-size: 40px;
+}
+
+.gesture_icon{
+    font-size: 48px;
+}
