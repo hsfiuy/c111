@@ -11,14 +11,14 @@ function take_snapshot(){
 }
 console.log("ml5 version : ", ml5.version);
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/mnZMpieBy/model.json', modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/D3j5r49ly/model.json', modelLoaded);
 
 function modelLoaded(){
     console.log('MODEL LOADED!!!!!!!!!!!!!!!!!!!');
 }
 
 function check(){  
-    img= document.getElementById("capture_image");
+    img= document.getElementById("captured_image");
     classifier.classify(img,gotResult);
 }
 
@@ -36,9 +36,22 @@ function gotResult(error, results){
         toSpeak="this is a thumb";
         document.getElementById("result_object_gesture_icon").innerHTML="👍";
     }
-    else if(gesture == "")
-
-
+    else if(gesture == "ok"){
+        toSpeak="this is a ok";
+        document.getElementById("result_object_gesture_icon").innerHTML="👌"; 
+    }
+    else if(gesture == "hand"){
+        toSpeak="this is a hand";
+        document.getElementById("result_object_gesture_icon").innerHTML="✋"; 
+    }
+    else if(gesture == "fist thign"){
+        toSpeak="this is a fist";
+        document.getElementById("result_object_gesture_icon").innerHTML="👊"; 
+    }
+    else if(gesture == "o"){
+        toSpeak="this is a o";
+        document.getElementById("result_object_gesture_icon").innerHTML="⭕"; 
+    }
     speak();
     }
 }
